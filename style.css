@@ -1,0 +1,197 @@
+body {
+
+  background: #393e46;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background-size: cover;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #e0e0e0;
+  overflow-x: hidden;
+  padding-top: 20px;
+
+}
+
+.sidenav a {
+  padding: 6px 8px 14px 16px;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: black;
+  display: block;
+}
+
+ul {
+
+  list-style-type: none;
+
+}
+
+.sidenav a:hover {
+  color: red;
+
+}
+
+.main {
+  margin-left: 160px;
+  font-size: 28px;
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+
+#game {
+
+  float: right;
+  width: 75vw;
+  margin-top: 15px;
+  margin-right: 75px;
+  height: 95vh;
+  border-radius: 5px;
+
+}
+
+.middle {
+  width: 800px;
+  margin-left: 350px;
+  background-color: #818181;
+  border-radius: 5px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+p {
+  text-indent: 10px;
+  padding: 0px 15px 0px 15px;
+}
+
+
+.middle_portfolio {
+
+  display: flex;
+  flex-direction: row;
+
+
+}
+
+.naam {
+  display: flex;
+  justify-content: center;
+  color: black;
+
+}
+
+.Tjardo {
+
+  width: 300px;
+  margin: 10px 10px 10px 350px;
+  background-color: #818181;
+  border-radius: 5px;
+  height: 90vh;
+  text-indent: 10px;
+  padding: 20px 15px 0px 15px;
+  box-shadow: 2px 2px 20px black;
+}
+#tjardoimagegame{
+  width: 300px;
+  height: 533px;
+}
+
+.Dhani {
+
+  width: 300px;
+  margin: 10px 10px 10px 10px;
+  background-color: #818181;
+  border-radius: 5px;
+  height: 90vh;
+  text-indent: 10px;
+  padding: 20px 15px 0px 15px;
+  box-shadow: 2px 2px 20px black;
+
+
+}
+.Dhani:hover {
+  box-shadow: 2px 2px 20px greenyellow;
+
+}
+.Tjardo:hover {
+  box-shadow: 2px 2px 20px orange;
+}
+.Adnan:hover {
+  box-shadow: 2px 2px 20px blue;
+
+}
+#myImagedhani{
+  border: 5px;
+}
+
+.Adnan {
+
+  width: 300px;
+  margin: 10px 10px 10px 10px;
+  background-color: #818181;
+  border-radius: 5px;
+  height: 90vh;
+  text-indent: 10px;
+  padding: 20px 15px 0px 15px;
+  box-shadow: 2px 2px 20px black;
+
+}
+#adnangimma{
+  width: 300px;
+  height: 533px;
+}
+#game{
+  box-shadow: 2px 2px 20px red;
+  height: 600px;
+  margin-top: 40px;
+  border: 10px;
+  border-color: black;
+}
+.inleidingdhanifavogame{
+  width: 395px;
+  height: 665px;
+  background-color: black;
+  margin-left: 600px;
+  margin-top: 25px;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  box-shadow: 2px 2px 20px greenyellow;
+
+
+
+}
+#witteTekst{
+  color: greenyellow;
+}
+.inleidingtjardofavogame{
+width: 395px;
+height: 665px;
+background-color: black;
+margin-left: 600px;
+margin-top: 25px;
+border-radius: 15px;
+border-style: solid;
+border-width: 5px;
+border-color: black;
+box-shadow: 2px 2px 20px orange;
+}
