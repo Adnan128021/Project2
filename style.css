@@ -198,3 +198,14 @@ border-width: 5px;
 border-color: black;
 box-shadow: 2px 2px 20px orange;
 }
+.dhanipadding{
+  height: 700px;
+  width: 800px;
+  background-color: white;
+  margin-left: 450px;
+  margin-top: 25px;
+}
+#floatrechts{
+  display: flex;
+  
+}
