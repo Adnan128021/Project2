@@ -76,7 +76,7 @@ ul {
   align-items: center;
 }
 
-h1,
+
 p {
   text-indent: 10px;
   padding: 0px 15px 0px 15px;
@@ -204,8 +204,22 @@ box-shadow: 2px 2px 20px orange;
   background-color: white;
   margin-left: 450px;
   margin-top: 25px;
+  box-shadow: 2px 2px 20px blue;
 }
 #floatrechts{
-  display: flex;
+ text-align: center;
+  border: 5px;
+  border-color: black;
+  box-shadow: 2px 2px 20px blue;
+}
+.Tekstmargindhani{
+  margin-left: 10px;
+}
+#jsdhani{
+  text-decoration: underline;
+}
+#datum{
+  text-align: right;
+
 
 }
