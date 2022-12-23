@@ -7,6 +7,8 @@ canvas.height = innerHeight
 var speler = new Image();
 speler.src = "img/Eesrte game karakter.png"
 
+var platform = new Image();
+platform.src = "img/Achtergrond.png"
 
 
 
@@ -45,21 +47,21 @@ update() {
 class Platform {
     constructor() {
         this.position = {
-            x: 500,
-            y: 100
+            x: 400,
+            y: 800
         }
         this.width = 300
-        this.height = 20
+        this.height = 300
     }
 
     draw() {
-        c.fillStyle = "red"
-        c.fillRect(this.position.x, this.position.y, this.width, this.height)
+
+        c.drawImage(platform, this.position.x-20, this.position.y-125, 400, 290)
     }
 }
 
 const player = new Player()
-const platform = new Platform()
+const platform_two = new Platform()
 
 const keys = {
     right: {
@@ -75,7 +77,7 @@ function animate() {
     requestAnimationFrame(animate)
     c.clearRect(0, 0, canvas.width, canvas.height)
     player.update()
-    platform.draw()
+    platform_two.draw()
 
     if (keys.right.pressed && player.position.x <1450) {
         player.velocity.x = 5
@@ -85,16 +87,16 @@ function animate() {
     } else
         player.velocity.x = 0
     if (keys.right.pressed) {
-        platform.position.x -= 5
+        platform_two.position.x -= 5
     } else if (keys.left.pressed) {
-        platform.position.x += 5
+        platform_two.position.x += 5
     }
     if (player.position.y + player.height
-        <= platform.position.y && player.position.y
-        + player.height + player.velocity.y >= platform.position.y
+        <= platform_two.position.y && player.position.y
+        + player.height + player.velocity.y >= platform_two.position.y
         && player.position.x +
-        player.whidth >= platform.position.x && player.position.x <= platform.position.x
-        + platform.width
+        player.whidth >= platform_two.position.x && player.position.x <= platform_two.position.x
+        + platform_two.width
     ) {
         player.velocity.y = 0
     }
