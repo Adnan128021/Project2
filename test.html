@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<style>
+        .hid {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<p>Image to use:</p>
+<img id="scream" class="hid" src="img/Background.png" alt="The Scream" width="220" height="277">
+
+<p>Canvas:</p>
+<canvas id="myCanvas" width="250" height="300" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+
+<script>
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    let img = new Image();
+    img.src = "img/dhanifoto.jpg";
+    img.onload = function(e) {
+        ctx.drawImage(img, 10, 10);
+    }
+</script>
+
+</body>
+</html>
