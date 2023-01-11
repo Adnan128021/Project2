@@ -2,34 +2,42 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Game</title>
-<link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link href="style.css" rel="stylesheet">
     <style>
-        body{
+        body {
             margin: 0;
         }
     </style>
 </head>
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 <style>
     body {
         margin: 0;
         overflow-y: hidden;
         overflow-x: hidden;
     }
-
 </style>
+<<<<<<< Updated upstream
 <body>
 
 
 
 <canvas></canvas>
 
+=======
+>>>>>>> Stashed changes
 
+<body>
+    <canvas></canvas>
 
+<<<<<<< Updated upstream
 <div class="header">
 
 
@@ -40,6 +48,19 @@
     <div class="sidenav">
 
         <a href="index.html">Home</a>
+=======
+    <script src="Game2.js"></script>
+
+
+    <div class="header">
+
+
+
+         <div id="nav" class="Nav">
+            <a href="javascript:void(0)" class="dicht" onclick="closeNav()">&times;</a>
+
+            <a href="index.html">Home</a>
+>>>>>>> Stashed changes
 
         <a href="favogame.html">Favoriete Game</a>
 
@@ -48,7 +69,18 @@
 
         <a href="game.html">Game</a>
 
+            <div id="Main">
 
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+            </div>
+
+            <script>
+                function openNav() {
+                    document.getElementById("nav").style.width = "250px";
+                    document.getElementById("Main").style.marginLeft = "250px";
+                }
+
+<<<<<<< Updated upstream
 
     </div>
 
@@ -56,5 +88,19 @@
 
 <script src="Game2.js"></script>
 
+=======
+                function closeNav() {
+                    document.getElementById("nav").style.width = "0";
+                    document.getElementById("Main").style.marginLeft = "0";
+                }
+            </script>
+
+
+
+    </div>
+
+    </div>
+>>>>>>> Stashed changes
 </body>
+
 </html>
