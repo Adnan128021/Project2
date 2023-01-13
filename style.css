@@ -76,6 +76,19 @@ ul {
   align-items: center;
 }
 
+.middle2 {
+  width: 800px;
+  margin-left: 450px;
+  margin-top: 70px;
+  background-color: #818181;
+  border-radius: 5px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 
 p {
   text-indent: 10px;
@@ -109,7 +122,8 @@ p {
   padding: 20px 15px 0px 15px;
   box-shadow: 2px 2px 20px black;
 }
-#tjardoimagegame{
+
+#tjardoimagegame {
   width: 300px;
   height: 533px;
 }
@@ -127,18 +141,22 @@ p {
 
 
 }
+
 .Dhani:hover {
   box-shadow: 2px 2px 20px greenyellow;
 
 }
+
 .Tjardo:hover {
   box-shadow: 2px 2px 20px orange;
 }
+
 .Adnan:hover {
   box-shadow: 2px 2px 20px blue;
 
 }
-#myImagedhani{
+
+#myImagedhani {
   border: 5px;
 }
 
@@ -154,18 +172,21 @@ p {
   box-shadow: 2px 2px 20px black;
 
 }
-#adnangimma{
+
+#adnangimma {
   width: 300px;
   height: 533px;
 }
-#game{
+
+#game {
   box-shadow: 2px 2px 20px red;
   height: 600px;
   margin-top: 40px;
   border: 10px;
   border-color: black;
 }
-.inleidingdhanifavogame{
+
+.inleidingdhanifavogame {
   width: 395px;
   height: 665px;
   background-color: black;
@@ -180,66 +201,75 @@ p {
 
 
 }
-#witteTekst{
+
+#witteTekst {
   color: greenyellow;
 }
-#witteTeksttjardo{
+
+#witteTeksttjardo {
   color: orange;
 }
-.inleidingtjardofavogame{
-width: 395px;
-height: 665px;
-background-color: black;
-margin-left: 600px;
-margin-top: 25px;
-border-radius: 15px;
-border-style: solid;
-border-width: 5px;
-border-color: black;
-box-shadow: 2px 2px 20px orange;
-}
-.dhanipadding{
-  height: 700px;
-  width: 800px;
-  background-color: white;
-  margin-left: 450px;
-  margin-top: 25px;
-  box-shadow: 2px 2px 20px grey;
-}
-.tjardopadding{
-  height: 700px;
-  width: 800px;
-  background-color: white;
-  margin-left: 450px;
-  margin-top: 25px;
-  box-shadow: 2px 2px 20px grey;
 
-}
-#floatrechts{
- text-align: center;
-  border: 5px;
+.inleidingtjardofavogame {
+  width: 395px;
+  height: 665px;
+  background-color: black;
+  margin-left: 600px;
+  margin-top: 25px;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 5px;
   border-color: black;
+  box-shadow: 2px 2px 20px orange;
+}
+
+.dhanipadding {
+  height: 700px;
+  width: 800px;
+  background-color: white;
+  margin-left: 450px;
+  margin-top: 25px;
   box-shadow: 2px 2px 20px grey;
 }
 
-#floatright{
+.tjardopadding {
+  height: 700px;
+  width: 800px;
+  background-color: white;
+  margin-left: 450px;
+  margin-top: 25px;
+  box-shadow: 2px 2px 20px grey;
+
+}
+
+#floatrechts {
   text-align: center;
   border: 5px;
   border-color: black;
   box-shadow: 2px 2px 20px grey;
 }
 
-.Tekstmargindhani{
+#floatright {
+  text-align: center;
+  border: 5px;
+  border-color: black;
+  box-shadow: 2px 2px 20px grey;
+}
+
+.Tekstmargindhani {
   margin-left: 10px;
 }
-#jsdhani{
+
+#jsdhani {
   text-decoration: underline;
 }
-#datum{
+
+#datum {
   text-align: right;
 
 
 }
+
 .Nav {
   height: 100%;
   width: 0;
