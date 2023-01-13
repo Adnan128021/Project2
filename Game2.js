@@ -16,6 +16,7 @@ ag.onload = function (e) {
 
 var platform = new Image();
 platform.src = "img/Achtergrond.png"
+platform.src = "img/Achtergrond.png"
 
 
 const gravity = 1.5
@@ -53,25 +54,32 @@ class Player {
 }
 
 class Platform {
-    constructor() {
+    constructor( {x, y }) {
         this.position = {
-            x: 0,
-            y: 750
+            x,
+            y
         }
-        this.height = 1800
         this.width = 1700
+        this.height = 1800
     }
 
 
     draw() {
-        //c.fillStyle = "red"
-        //c.fillRect(this.position.x, this.position.y, this.width, this.height)
+        c.fillStyle = "red"
+        c.fillRect(this.position.x, this.position.y, this.width, this.height)
         c.drawImage(platform, this.position.x - 20, this.position.y - 180, 1100, 400)
+        c.drawImage(platform, this.position.x + 300, this.position.y - 180, 1100, 400)
+        c.drawImage(platform, this.position.x + 600, this.position.y - 180, 1100, 400)
     }
 }
 
-const player = new Player()
-const platform_two = new Platform()
+let player = new Player()
+let platform_two = new Platform({
+    x: 0, y: 800
+})
+    new Platform({
+    x: 0, y: 800
+})
 
 const keys = {
     right: {
