@@ -7,18 +7,11 @@ canvas.height = window.innerHeight
 let speler = new Image();
 speler.src = "img/Eerstegamekarakter.png"
 
-let spelerflip = new Image();
-spelerflip.src = "img/Eerstegamekarakterflip.png"
-
 
 let ag = new Image();
 ag.src = "img/gamebackground.png";
 ag.onload = function (e) {
-<<<<<<< Updated upstream
     c.drawImage(ag, 5, 5, canvas.width, 100, canvas.height, 100);
-=======
-    c.drawImage(ag, 20, 20, canvas.width, 1600);
->>>>>>> Stashed changes
 }
     
 var platform = new Image();
@@ -38,27 +31,13 @@ class Player {
             x: 0,
             y: 1
         }
-        this.direction = false
         this.width = 50;
         this.height = 50;
     }
 
     draw() {
-<<<<<<< Updated upstream
         c.drawImage(ag, 7, 7, canvas.width, 800);
         c.drawImage(speler, this.position.x - 20, this.position.y - 125, 240, 230);
-=======
-        c.drawImage(ag, 10, 10, canvas.width, 1600)
-        if (this.direction){
-
-            
-
-        c.drawImage(spelerflip , this.position.x - 20, this.position.y - 125, 240, 230);
-    }
-        else {
-            c.drawImage(speler, this.position.x - 20, this.position.y - 125, 240, 230);
-        }
->>>>>>> Stashed changes
     }
 
 
@@ -95,8 +74,7 @@ class Platform {
 }
 
 let player = new Player()
-let platform_two =
-    new Platform({
+let platform_two = new Platform({
     x: 0, y: 800
 })
     new Platform({
@@ -145,13 +123,11 @@ animate()
 addEventListener('keydown', ({keyCode}) => {
     switch (keyCode) {
         case 65:
-            keys.left.pressed = true;
-            player.direction = true
+            keys.left.pressed = true
             break
         case 83:
         case 68:
-            keys.right.pressed = true;
-            player.direction = false
+            keys.right.pressed = true
             break
         case 87:
             player.velocity.y -= 20
@@ -175,8 +151,5 @@ addEventListener('keyup', ({keyCode}) => {
     }
 
 })
-
-
-
 
 
