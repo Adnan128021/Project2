@@ -9,11 +9,11 @@ speler.src = "img/Eerstegamekarakter.png"
 
 
 let ag = new Image();
-ag.src = "img/Background.png";
+ag.src = "img/gamebackground.png";
 ag.onload = function (e) {
-    c.drawImage(ag, 10, 10, canvas.width, 1600);
+    c.drawImage(ag, 5, 5, canvas.width, 100, canvas.height, 100);
 }
-
+    
 var platform = new Image();
 platform.src = "img/Achtergrond.png"
 
@@ -24,7 +24,7 @@ class Player {
     constructor() {
         this.position = {
             x: 200,
-            y: 100
+            y: 250
         }
         this.velocity = {
             x: 0,
@@ -35,7 +35,7 @@ class Player {
     }
 
     draw() {
-        c.drawImage(ag, 10, 10, canvas.width, 1600);
+        c.drawImage(ag, 5, 5, canvas.width, 800);
         c.drawImage(speler, this.position.x - 20, this.position.y - 125, 240, 230);
     }
 
@@ -46,7 +46,7 @@ class Player {
         this.position.y += this.velocity.y
 
         if (this.position.y + this.height +
-            this.velocity.y <= canvas.height)
+            this.velocity.y <= canvas.height - 130)
             this.velocity.y += gravity
         else this.velocity.y = 0
     }
