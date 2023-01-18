@@ -35,7 +35,7 @@ class Player {
     }
 
     draw() {
-        c.drawImage(ag, 5, 5, canvas.width, 800);
+        c.drawImage(ag, 7, 7, canvas.width, 800);
         c.drawImage(speler, this.position.x - 20, this.position.y - 125, 240, 230);
     }
 
@@ -137,7 +137,7 @@ addEventListener('keyup', ({keyCode}) => {
             keys.right.pressed = false
             break
         case 87:
-            player.velocity.y -= 20
+            player.velocity.y -= 13
             break
 
     }
