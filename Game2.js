@@ -5,7 +5,8 @@ canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 
 let speler = new Image();
-speler.src = "img/Eerstegamekarakter.png"
+speler.src = "img/runescapezombie.png"
+
 
 
 
@@ -38,6 +39,7 @@ class Player {
         this.width = 50;
         this.height = 50;
     }
+
 
     isWith(x, y){
         if(x >= this.position.x && x <= this.position.x + this.width){
@@ -120,16 +122,16 @@ function animate() {
     player.update()
 
     if (keys.right.pressed && player.position.x < 1450) {
-        player.velocity.x = 5
+        player.velocity.x = 20
     } else if (keys.left.pressed && player.position.x > 165) {
-        player.velocity.x = -5
+        player.velocity.x = -20
 
     } else
         player.velocity.x = 0
     if (keys.right.pressed) {
-        platform_two.position.x -= 5
+        platform_two.position.x -= 20
     } else if (keys.left.pressed) {
-        platform_two.position.x += 5
+        platform_two.position.x += 20
     }
     if (player.position.y + player.height <= platform_two.position.y
         && player.position.y + player.height + player.velocity.y >= platform_two.position.y
