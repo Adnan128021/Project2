@@ -5,7 +5,7 @@ canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 
 let speler = new Image();
-speler.src = "img/runescapezombie.png"
+speler.src = "img/Eerstegamekarakter.png"
 
 
 
