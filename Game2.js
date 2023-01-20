@@ -14,7 +14,7 @@ ag.src = "img/gamebackground.png";
 ag.onload = function (e) {
     c.drawImage(ag, 5, 5, canvas.width, 100, canvas.height, 100);
 }
-    
+
 var platform = new Image();
 platform.src = "img/Achtergrond.png"
 platform.src = "img/Achtergrond.png"
@@ -58,7 +58,7 @@ class Player {
 }
 
 class Platform {
-    constructor( {x, y }) {
+    constructor({ x, y }) {
         this.position = {
             x,
             y
@@ -81,7 +81,7 @@ let player = new Player()
 let platform_two = new Platform({
     x: 0, y: 800
 })
-    new Platform({
+new Platform({
     x: 0, y: 800
 })
 
@@ -124,7 +124,7 @@ function animate() {
 
 animate()
 
-addEventListener('keydown', ({keyCode}) => {
+addEventListener('keydown', ({ keyCode }) => {
     switch (keyCode) {
         case 65:
             keys.left.pressed = true
@@ -140,7 +140,7 @@ addEventListener('keydown', ({keyCode}) => {
     }
 
 })
-addEventListener('keyup', ({keyCode}) => {
+addEventListener('keyup', ({ keyCode }) => {
     switch (keyCode) {
         case 65:
             keys.left.pressed = false
