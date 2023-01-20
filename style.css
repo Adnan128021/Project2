@@ -60,7 +60,7 @@ ul {
   width: 75vw;
   margin-top: 15px;
   margin-right: 75px;
-  height: 200px;
+  height: 100vh;
   border-radius: 5px;
 
 }
@@ -87,6 +87,16 @@ ul {
   justify-content: center;
   align-items: center;
 
+}
+
+.TekstBeschrijving{
+
+  font-size: 2em;
+}
+#titelB{
+
+  text-align: center;
+  margin-bottom: 90px;
 }
 
 
