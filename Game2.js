@@ -8,6 +8,7 @@ let speler = new Image();
 speler.src = "img/Eerstegamekarakter.png"
 
 
+
 let ag = new Image();
 ag.src = "img/gamebackground.png";
 ag.onload = function (e) {
@@ -19,11 +20,14 @@ platform.src = "img/Achtergrond.png"
 platform.src = "img/Achtergrond.png"
 
 
+
+
+
 const gravity = 1.5
 
 class Player {
     constructor() {
-        this.position = {
+        this.position = { 
             x: 200,
             y: 250
         }
