@@ -16,8 +16,8 @@ ag.onload = function (e) {
 }
 
 var platform = new Image();
-platform.src = "img/Achtergrond.png"
-platform.src = "img/Achtergrond.png"
+//platform.src = "img/Achtergrond.png"
+//platform.src = "img/Achtergrond.png"
 
 
 
@@ -39,8 +39,25 @@ class Player {
         this.height = 50;
     }
 
+    isWith(x, y){
+        if(x >= this.position.x && x <= this.position.x + this.width){
+            if (y >= this.position.y && y <= this.position.y + this.height){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    boxIsWidthin(box){
+        let p1 = this.isWith(box.position.x, box.position.y);
+        let p2 = this.isWith(box.position.x + this.width, box.position.y);
+        let p3 = this.isWith(box.position.x, box.position.y + box.height);
+        let p4 = this.isWith(this.position.x + box.width, box.position.y + box.height);
+        return p1|| p2|| p3|| p4
+    }
+
+
     draw() {
-        c.drawImage(ag, 7, 7, canvas.width, 800);
         c.drawImage(speler, this.position.x - 20, this.position.y - 125, 240, 230);
     }
 
@@ -69,7 +86,7 @@ class Platform {
 
 
     draw() {
-        c.fillStyle = "red"
+        //c.fillStyle = "red"
         c.fillRect(this.position.x, this.position.y, this.width, this.height)
         c.drawImage(platform, this.position.x - 20, this.position.y - 180, 1100, 400)
         c.drawImage(platform, this.position.x + 300, this.position.y - 180, 1100, 400)
@@ -98,6 +115,7 @@ const keys = {
 function animate() {
     requestAnimationFrame(animate)
     c.clearRect(0, 0, canvas.width, canvas.height)
+    c.drawImage(ag, 7, 7, canvas.width, canvas.height);
     platform_two.draw()
     player.update()
 
