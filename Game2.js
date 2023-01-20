@@ -21,8 +21,8 @@ var platform = new Image();
 //platform.src = "img/Achtergrond.png"
 
 
-
-
+canvas.width = innerWidth
+canvas.height = innerHeight
 
 const gravity = 1.5
 
