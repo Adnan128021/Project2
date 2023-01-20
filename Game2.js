@@ -17,8 +17,6 @@ ag.onload = function (e) {
 }
 
 var platform = new Image();
-//platform.src = "img/Achtergrond.png"
-//platform.src = "img/Achtergrond.png"
 
 
 canvas.width = innerWidth
