@@ -8,26 +8,22 @@ let speler = new Image();
 speler.src = "img/Eerstegamekarakter.png"
 
 
-
 let ag = new Image();
 ag.src = "img/gamebackground.png";
-ag.onload = function (e) {
-    c.drawImage(ag, 5, 5, canvas.width, 100, canvas.height, 100);
+ag.onload = function () {
+    c.drawImage(ag, 5, 5, canvas.width, canvas.height);
 }
 
 var platform = new Image();
-//platform.src = "img/Achtergrond.png"
-//platform.src = "img/Achtergrond.png"
-
-
-
+platform.src = "img/Achtergrond.png"
+platform.src = "img/Achtergrond.png"
 
 
 const gravity = 1.5
 
 class Player {
     constructor() {
-        this.position = { 
+        this.position = {
             x: 200,
             y: 250
         }
@@ -37,27 +33,11 @@ class Player {
         }
         this.width = 50;
         this.height = 50;
+        this.isOnGround = false;
     }
-
-    isWith(x, y){
-        if(x >= this.position.x && x <= this.position.x + this.width){
-            if (y >= this.position.y && y <= this.position.y + this.height){
-                return true;
-            }
-        }
-        return false;
-    }
-
-    boxIsWidthin(box){
-        let p1 = this.isWith(box.position.x, box.position.y);
-        let p2 = this.isWith(box.position.x + this.width, box.position.y);
-        let p3 = this.isWith(box.position.x, box.position.y + box.height);
-        let p4 = this.isWith(this.position.x + box.width, box.position.y + box.height);
-        return p1|| p2|| p3|| p4
-    }
-
 
     draw() {
+        c.drawImage(ag, 7, 7, canvas.width, 800);
         c.drawImage(speler, this.position.x - 20, this.position.y - 125, 240, 230);
     }
 
@@ -86,20 +66,45 @@ class Platform {
 
 
     draw() {
-        //c.fillStyle = "red"
+        c.fillStyle = "red"
         c.fillRect(this.position.x, this.position.y, this.width, this.height)
         c.drawImage(platform, this.position.x - 20, this.position.y - 180, 1100, 400)
         c.drawImage(platform, this.position.x + 300, this.position.y - 180, 1100, 400)
         c.drawImage(platform, this.position.x + 600, this.position.y - 180, 1100, 400)
     }
 }
+var num = 2;
+
+var platforms = [];
+
+function createplat() {
+    for (i = 0; i < num; i++) {
+        platforms.push(
+            {
+                x: 100 * i,
+                y: 200 + (30 * i),
+                width: 110,
+                height: 15
+            }
+        );
+    }
+}
+
+function renderplat() {
+    ctx.fillStyle = "#45597E";
+    ctx.fillRect(platforms[0].x, platforms[0].y, platforms[0].width, platforms[0].height);
+    ctx.fillRect(platforms[1].x, platforms[1].y, platforms[1].width, platforms[1].height);
+
+}
 
 let player = new Player()
 let platform_two = new Platform({
-    x: 0, y: 800
+    x: 0, y: 800,
+
 })
 new Platform({
     x: 0, y: 800
+
 })
 
 const keys = {
@@ -115,7 +120,6 @@ const keys = {
 function animate() {
     requestAnimationFrame(animate)
     c.clearRect(0, 0, canvas.width, canvas.height)
-    c.drawImage(ag, 7, 7, canvas.width, canvas.height);
     platform_two.draw()
     player.update()
 
@@ -135,7 +139,9 @@ function animate() {
         && player.position.y + player.height + player.velocity.y >= platform_two.position.y
         && player.position.x + player.width >= platform_two.position.x
         && player.position.x <= platform_two.position.x + platform_two.width
+
     ) {
+        Player.isOnGround = true;
         player.velocity.y = 0
     }
 }
@@ -152,7 +158,10 @@ addEventListener('keydown', ({ keyCode }) => {
             keys.right.pressed = true
             break
         case 87:
-            player.velocity.y -= 20
+            if (Player.isOnGround) {
+                player.velocity.y -= 20
+                Player.isOnGround = false;
+            }
             break
 
     }
@@ -171,7 +180,7 @@ addEventListener('keyup', ({ keyCode }) => {
             break
 
     }
-    
+
 
 })
 
